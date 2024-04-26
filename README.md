@@ -35,9 +35,9 @@ Before you begin, make sure you have Docker and Docker Compose installed on your
 
 5. Once the containers are up and running, you can access the applications using the following URLs:
 
-    - Go application: `http://localhost:8080`
-    - Next.js application: `http://localhost:3000`
-    - WordPress application: `http://localhost:8800`
+    - Go application: (http://localhost:8080)
+    - Next.js application: (http://localhost:3000)
+    - WordPress application: (http://localhost:8800)
 
 6. To stop all the containers, run:
 
