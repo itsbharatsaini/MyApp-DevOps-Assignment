@@ -2,6 +2,11 @@
 
 This repository contains a Docker Compose configuration to deploy a multi-service application consisting of a Go application, a Next.js application, a WordPress application, and a MySQL database.
 
+Apps GitHub Repo - 
+- Go-app repo: (https://github.com/itsbharatsaini/go-app)
+- Next.js-app repo: (https://github.com/itsbharatsaini/nextjs-app)
+- WordPress-app repo: (https://github.com/itsbharatsaini/wordpress-app)
+
 ## Prerequisites
 
 Before you begin, make sure you have Docker and Docker Compose installed on your system.
