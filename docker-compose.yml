@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  go-app:
+    image: itsbharatsaini/go-app:latest
+    ports:
+      - "8080:8080"
+
+  nextjs-app:
+    image: itsbharatsaini/nextjs-app:latest
+    ports:
+      - "3000:3000"
+
+  wordpress-mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpressuser
+      MYSQL_PASSWORD: your_password
+    volumes:
+      - mysql:/var/lib/mysql
+
+  wordpres-app:
+    depends_on:
+      - wordpress-mysql
+    image: itsbharatsaini/wordpress-app:latest
+    ports:
+      - "8800:80"
+    environment:
+      WORDPRESS_DB_HOST: wordpress-mysql
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpressuser
+      WORDPRESS_DB_PASSWORD: your_password
+    volumes:
+      - wordpress-app:/var/www/html
+
+
+
+volumes:
+  wordpress-app:
+  mysql:
